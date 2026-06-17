@@ -50,7 +50,7 @@ function Play({bgImage , customClassess}) {
   }, [])
 
   return (
-    <div data-scroll data-scroll-speed = "-0.5" ref={containerRef} className={`cursor-pointer relative play-section ${bgImage && "bg-[url(/Top-View.jpg)] bg-center w-full md:h-screen object-cover"} overflow-hidden h-screen ${customClassess}`}>
+    <div data-scroll data-scroll-speed = "-0.5" ref={containerRef} className={`cursor-pointer relative play-section ${bgImage && "bg-[url(/Top-View.jpg)] bg-center w-full h-87.5! md:h-screen! object-cover"} overflow-hidden h-screen ${customClassess}`}>
       <div data-scroll data-scroll-speed = "-0.01" className="container flex justify-center items-center gap-7 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <div className=" relative box w-41 h-41 rounded-full bg-[#f4f4f4] flex justify-center items-center">
           <span className='absolute z-40 text-white'>PLAY</span>

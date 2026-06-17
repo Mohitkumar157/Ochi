@@ -1,26 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
 import gsap from 'gsap';
 
-console.log(gsap);
 
 
 function Hero() {
-
+  const imageRef = useRef();
   useEffect(() => {
 
-   gsap.fromTo(
-  ".scroll-down",
-  { y: -20, opacity: 0 },
-  {
-    y: 20,
-    opacity: 1,
-    duration: 1.5,
-    repeat: -1,
-    repeatDelay:1
-  }
-);
+
+    gsap.fromTo(imageRef.current,
+      { x: "-100%", opacity: 0.7, },
+      {
+        x: "0%",
+        duration: 1,
+        opacity: 1,
+        ease: "bounce.out",
+      }
+    )
+
+    gsap.fromTo(
+      ".scroll-down",
+      { y: -20, opacity: 0 },
+      {
+        y: 20,
+        opacity: 1,
+        duration: 1.5,
+        repeat: -1,
+        repeatDelay: 1
+      }
+    );
 
   }, [])
   return (
@@ -31,21 +40,24 @@ function Hero() {
             We create
           </div>
           <div className="flex items-end text-[8rem] gap-4">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "136px" }}
-              transition={{ ease: [0.64, 0, 0.78, 0], duration: 1 }}
-              className="w-20! h-10.5! lg:w-34! lg:h-20! md:w-20! md:h-12! shrink-0 rounded-md overflow-hidden">
+
+
+            <div className="heading-image w-20! h-10.5! lg:w-34! lg:h-20! md:w-20! md:h-12! shrink-0 rounded-md overflow-hidden">
               <img
+                ref={imageRef}
                 src="/content-image.jpg"
                 alt="content-image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-md"
               />
-            </motion.div>
+            </div>
 
-            <div className="flex items-center leading-[0.7] text-6xl md:text-7xl lg:text-[8rem]">
+
+
+            <div className="bg-[#f1f1f1] flex items-center leading-[0.7] text-6xl md:text-7xl lg:text-[8rem]">
               eye-opening
             </div>
+
+
           </div>
           <div className='text-6xl md:text-7xl lg:text-[8rem]'> presentations</div>
         </h1>
@@ -71,15 +83,15 @@ function Hero() {
             <p className='group-hover:text-white group-hover:bg-black transition-all duration-300 ease-in uppercase px-3 py-1 text-[12px] rounded-full border border-black'>Start the project</p>
             <div className='hidden md:block'>
               <div className='relative border border-black rounded-full  w-7 h-7 p-1 flex justify-center items-center'>
-              <ArrowUpRight className='text-black w-5 h-5 group-hover:text-white absolute z-10 transition-all duration-300' />
-              <div className='w-0 h-0 bg-black absolute rounded-full group-hover:w-7 group-hover:h-7 transition-all duration-300 ease-in'></div>
-            </div>
+                <ArrowUpRight className='text-black w-5 h-5 group-hover:text-white absolute z-10 transition-all duration-300' />
+                <div className='w-0 h-0 bg-black absolute rounded-full group-hover:w-7 group-hover:h-7 transition-all duration-300 ease-in'></div>
+              </div>
             </div>
           </button>
         </div>
         <div className='text-center  h-5 overflow-y-hidden'>
           <p className='scroll-down'>Scroll down</p>
-         
+
         </div>
       </div>
     </div>
