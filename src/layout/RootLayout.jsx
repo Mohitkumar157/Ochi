@@ -19,10 +19,12 @@ function RootLayout() {
 
   // re-init after DOM paints
   setTimeout(() => {
-    scrollInstance.current = new LocomotiveScroll({
+   if(window.innerWidth >= 768){
+     scrollInstance.current = new LocomotiveScroll({
       el: scrollRef.current,
       smooth: true,
     });
+   }
   }, 0);
 
   return () => {
