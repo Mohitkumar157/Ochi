@@ -13,7 +13,7 @@ function OurWork() {
         <OverLay />
       </div>
       <PurposeDriven />
-      <div className='pt-32 sticky -top-32'>
+      <div className='pt-32 md:sticky md:-top-32'>
         <WeAreOchi  movingText={"Behance"}/>
       </div>
       <ReadyToStart />

@@ -12,7 +12,7 @@ function About() {
       <AboutUs />
       <TeamImage />
 
-      <div className='sticky -top-70' data-scroll data-scroll-speed = "-0.01">
+      <div className='md:sticky md:-top-70' data-scroll data-scroll-speed = "-0.01">
         <WeAreOchi movingText={'our commitments'} />
       <StackedCards />
       </div>

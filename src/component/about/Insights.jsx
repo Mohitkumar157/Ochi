@@ -16,7 +16,7 @@ const insightCardData = [
 ]
 function Insights() {
   return (
-    <div className='bg-[#f1f1f1] sticky top-0' data-scroll  data-scroll-speed = "0.01">
+    <div className='bg-[#f1f1f1] md:sticky md:top-0' data-scroll  data-scroll-speed = "0.01">
       <div className="container">
         <h2 className='text-5xl'>Insights</h2>
       </div>

@@ -10,28 +10,39 @@ function RootLayout() {
   const location = useLocation();
 
   useEffect(() => {
-  if (!scrollRef.current) return;
+    if (!scrollRef.current) return;
 
-  // destroy old instance properly
-  if (scrollInstance.current) {
-    scrollInstance.current.destroy();
-  }
+    const initScroll = () => {
+      const isDesktop = window.innerWidth >= 768;
 
-  // re-init after DOM paints
-  setTimeout(() => {
-   if(window.innerWidth >= 768){
-     scrollInstance.current = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-    });
-   }
-  }, 0);
+      // Pehle old instance destroy
+      if (scrollInstance.current) {
+        scrollInstance.current.destroy();
+        scrollInstance.current = null;
+      }
 
-  return () => {
-    scrollInstance.current?.destroy();
-    scrollInstance.current = null;
-  };
-}, [location.pathname]);
+      // Sirf desktop par initialize
+      if (isDesktop) {
+        scrollInstance.current = new LocomotiveScroll({
+          el: scrollRef.current,
+          smooth: true,
+        });
+      }
+    };
+
+    initScroll();
+
+    window.addEventListener("resize", initScroll);
+
+    return () => {
+      window.removeEventListener("resize", initScroll);
+
+      if (scrollInstance.current) {
+        scrollInstance.current.destroy();
+        scrollInstance.current = null;
+      }
+    };
+  }, [location.pathname]);
 
   return (
     <div data-scroll-container ref={scrollRef}>
