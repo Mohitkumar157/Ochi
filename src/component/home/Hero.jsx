@@ -2,12 +2,18 @@ import React, { useEffect, useRef } from 'react'
 import { ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 
-
+import { useGSAP } from "@gsap/react";
 
 function Hero() {
   const imageRef = useRef();
-  useEffect(() => {
+  const headingRef = useRef();
 
+  useGSAP(() => {
+    gsap.from(headingRef.current, {
+      x: 100,
+      duration: 1,
+      ease: "bounce.out"
+    });
 
     gsap.fromTo(imageRef.current,
       { x: "-100%", opacity: 0.7, },
@@ -30,14 +36,17 @@ function Hero() {
         repeatDelay: 1
       }
     );
+  }, []);
 
-  }, [])
+
+
+
   return (
     <div data-scroll data-scroll-speed="-.5" className="hero md:h-screen bg-[#f1f1f1] md:pt-16 pt-9">
       <div className='container relative'>
         <h1 className=' text-[8rem] text-[#212121] uppercase flex flex-col items-start leading-27'>
-          <div className='text-6xl md:text-7xl lg:text-[8rem]'>
-            We create
+          <div className='text-6xl md:text-7xl lg:text-[8rem] overflow-hidden'>
+            <span className='inline-block'> We create</span>
           </div>
           <div className="flex items-end text-[8rem] gap-4">
 
@@ -53,8 +62,8 @@ function Hero() {
 
 
 
-            <div className="bg-[#f1f1f1] flex items-center leading-[0.7] text-6xl md:text-7xl lg:text-[8rem]">
-              eye-opening
+            <div className="bg-[#f1f1f1] flex items-center leading-[0.7] text-6xl md:text-7xl lg:text-[8rem] overflow-hidden">
+              <span ref={headingRef} className='inline-block py-0.5'>eye-opening</span>
             </div>
 
 
@@ -80,7 +89,9 @@ function Hero() {
           <p>Presentation and storytelling agency</p>
           <p>For innovation teams and global brands</p>
           <button className='uppercase flex items-center gap-2 cursor-pointer group'>
-            <p className='group-hover:text-white group-hover:bg-black transition-all duration-300 ease-in uppercase px-3 py-1 text-[12px] rounded-full border border-black'>Start the project</p>
+            <p className='group-hover:text-white group-hover:bg-black transition-all duration-300 ease-in uppercase px-3 py-1 text-[12px] rounded-full border border-black'>
+              Start the project
+            </p>
             <div className='hidden md:block'>
               <div className='relative border border-black rounded-full  w-7 h-7 p-1 flex justify-center items-center'>
                 <ArrowUpRight className='text-black w-5 h-5 group-hover:text-white absolute z-10 transition-all duration-300' />
@@ -89,7 +100,7 @@ function Hero() {
             </div>
           </button>
         </div>
-        <div className='text-center  h-5 overflow-y-hidden'>
+        <div className='text-center  h-5 overflow-y-hidden hidden md:block'>
           <p className='scroll-down'>Scroll down</p>
 
         </div>

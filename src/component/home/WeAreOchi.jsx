@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-function WeAreOchi() {
+function WeAreOchi({movingText}) {
   return (
     <div data-scroll data-scroll-section data-scroll-speed = "-0.01" className='bg-[#004d43] text-[#ffffff] py-16 rounded-tl-2xl rounded-tr-2xl'>
 
@@ -14,8 +14,8 @@ function WeAreOchi() {
             repeatType: "loop",
             ease: "linear"
           }}
-          className='font-[FounderGrotesk]! pb-6 md:pb-9 pl-6 text-[11.5rem] md:text-[20rem] text-white! whitespace-nowrap'>
-          WE ARE OCHI
+          className='uppercase font-[FounderGrotesk]! pb-6 md:pb-9 pl-6 text-[11.5rem] md:text-[20rem] text-white! whitespace-nowrap'>
+         {movingText}
         </motion.h2>
         <motion.h2
           initial={{ x: 0 }}
@@ -26,8 +26,8 @@ function WeAreOchi() {
           repeatType: "loop",
           ease: "linear"
           }}
-          className='font-[FounderGrotesk]! pb-6 md:pb-9 pl-6  text-[11.5rem] md:text-[20rem] text-white! whitespace-nowrap'>
-          WE ARE OCHI
+          className='uppercase font-[FounderGrotesk]! pb-6 md:pb-9 pl-6  text-[11.5rem] md:text-[20rem] text-white! whitespace-nowrap'>
+          {movingText}
         </motion.h2>
 
         <motion.h2
@@ -39,8 +39,8 @@ function WeAreOchi() {
           repeatType: "loop",
           ease: "linear"
           }}
-          className='font-[FounderGrotesk]! pb-6 md:pb-9 pl-6 text-[11.5rem] md:text-[20rem] font-bold! text-white! whitespace-nowrap'>
-          WE ARE OCHI
+          className='uppercase font-[FounderGrotesk]! pb-6 md:pb-9 pl-6 text-[11.5rem] md:text-[20rem] font-bold! text-white! whitespace-nowrap'>
+          {movingText}
         </motion.h2>
       </div>
 
@@ -48,4 +48,4 @@ function WeAreOchi() {
   )
 }
 
-export default WeAreOchi
+export default WeAreOchi;

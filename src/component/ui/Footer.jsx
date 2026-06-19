@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer data-scroll data-scroll-speed = "-0.01" className="relative z-10 w-full h-screen bg-[#f1f1f1] px-5 md:px-10 lg:px-16 py-10 md:py-16">
+    <footer data-scroll data-scroll-speed = "-0.02" className="relative z-10 w-full h-screen bg-[#f1f1f1] px-5 md:px-10 lg:px-16 py-10 md:py-16">
       {/* Top Section */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1fr] gap-12 border-b border-zinc-300 pb-14">
         
