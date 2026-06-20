@@ -1,8 +1,8 @@
 import React from 'react'
 
-function InsightCard({data}) {
+function InsightCard({data , className}) {
   return (
-    <div className='cursor-pointer'>
+    <div className={`cursor-pointer ${className}`}>
       <div className='overflow-hidden rounded-md '>
         <img src={data.img} alt="insight-card-image" className='w-full object-cover'/>
       </div>

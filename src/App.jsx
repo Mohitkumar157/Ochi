@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: "about-us",
+        path: "aboutus",
         element: <About />
       },
       {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Insights />
       },
       {
-        path: "contact-us",
+        path: "contactus",
         element: <Contact />
       }
     ]

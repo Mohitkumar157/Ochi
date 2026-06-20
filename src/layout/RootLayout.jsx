@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../component/ui/Header";
 import Footer from "../component/ui/Footer";
 import LocomotiveScroll from "locomotive-scroll";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 function RootLayout() {
+  const [routeText  ,setRouteText] = useState("")
   const scrollRef = useRef(null);
   const scrollInstance = useRef(null);
   const location = useLocation();
@@ -44,12 +46,26 @@ function RootLayout() {
     };
   }, [location.pathname]);
 
+ 
   return (
-    <div data-scroll-container ref={scrollRef}>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <>
+      <div id="overLay" className="text-5xl text-white absolute top-0 left-0 w-full h-0 overflow-hidden bg-[#212121] z-999">
+        <div className="container ">
+          <div className=" w-full h-screen flex justify-start items-center ">
+            <div className="overflow-hidden">
+              <h1 className="overlay-heading text-9xl text-[#f1f1f1]!">
+              {routeText.slice(1 , routeText.length).toUpperCase()}
+              </h1>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div data-scroll-container ref={scrollRef} className="overlay-parent">
+        <Header setRouteText = {setRouteText}/>
+        <Outlet />
+        <Footer />
+      </div>
+    </>
   );
 }
 
