@@ -33,7 +33,7 @@ function PurposeDriven() {
         <div className='bg-white' data-scroll data-scroll-speed="0.01">
             <div className='container'>
                 <h2 className='text-5xl py-16'>
-                    Purpose driven, <span>strategy-led presentations</span> <br />
+                    Purpose driven, <span>strategy-led presentations</span> <br className='hidden md:block'/>
                     that people care about.
                 </h2>
 

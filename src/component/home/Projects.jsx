@@ -44,7 +44,7 @@ function Projects() {
       <div className="container flex flex-col gap-5">
         {projectCardData?.map((item , index) => <ProjectCard data = {item} key={index} className = {`${index > 0 && "mt-16"}`}/>)}
       </div>
-      <div className='flex justify-center items-center p-4 mt-35'>
+      <div className='flex justify-center items-center p-4 mt-20 md:mt-35'>
         <PrimaryButton  ctaText = "View all case studies"/>
       </div>
     </div>

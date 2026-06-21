@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import PrimaryButton from '../ui/PrimaryButton'
 
 function About() {
     const [animate, setAnimate] = useState(false);
+    
     return (
-        <div data-scroll data-scroll-section data-scroll-speed = "-0.09" className='bg-[#cdea68] relative z-10 rounded-xl pb-9'>
+        <div data-scroll data-scroll-section data-scroll-speed = "-0.09" className='bg-[#cdea68] relative -top-2.5 md:top-0 z-10 rounded-xl pb-9'>
             <div className='border-b-[0.1px] border-[#99ad53]'>
                 <div className="container">
-                    <p className='text-3xl md:text-5xl lg:text-6xl text-[#212121] mb-10 pt-10 md:mb-16 md:pt-16'>
+                    <p className='whatWeDo text-3xl md:text-5xl lg:text-6xl text-[#212121] mb-10 pt-10 md:mb-16 md:pt-16'>
                         We craft category-defining presentations,
                         brand identities, and digital experiences that <span className='border-b'>drive funding,</span>
                         <span className='border-b'>sales,</span> and <span className='border-b'>market leadership.</span>

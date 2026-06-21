@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import PrimaryButton from "../ui/PrimaryButton";
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 function ContactUs() {
+  const contactHeading = useRef();
+  useGSAP(() => {
+    gsap.from(".contact-heading", {
+      y: "100%",
+      duration: .7,
+      delay : .2,
+      opacity : 0.4,
+      stagger :.1
+    })
+  })
   return (
     <section className="w-full bg-[#CFCFCF] py-16">
       <div className="container mx-auto px-5 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28">
@@ -9,15 +20,22 @@ function ContactUs() {
         {/* Heading */}
         <h1
           className="
-            uppercase text-[#212121] font-black tracking-tight leading-[0.9]
+            uppercase text-[#212121] font-black leading-[0.9]
             text-[2.5rem]
             sm:text-[4rem]
             md:text-[5rem]
             lg:text-[7rem]
             xl:text-[8rem]
+            overflow-hidden
           "
         >
-          Let’s Build <br /> Something Great
+          <span className="contact-heading inline-block">
+            Let’s Build
+          </span>
+           <br />
+          <span className="contact-heading inline-block">
+            Something Great
+          </span>
         </h1>
 
         {/* Content */}
@@ -91,7 +109,7 @@ function ContactUs() {
               "
             />
 
-            <PrimaryButton ctaText={"send message"}/>
+            <PrimaryButton ctaText={"send message"} />
           </form>
         </div>
       </div>

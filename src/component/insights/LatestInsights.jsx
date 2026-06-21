@@ -81,7 +81,7 @@ function LatestInsights() {
     return (
         <div>
             <div className="container">
-                <div className='flex justify-between w-full'>
+                <div className='flex flex-col gap-5 md:flex-row justify-between w-full'>
                     <p className='md:w-[50%]'>Latest insights:</p>
                     <div className='md:w-[50%] flex flex-wrap gap-2'>
                         {btnData.map((text , i) => <FilterButton key={i} btnText={text} selectedFilter = {selectedFilter} setSelectedFilter = {setSelectedFilter} />)}

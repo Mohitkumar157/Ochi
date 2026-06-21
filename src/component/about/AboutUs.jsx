@@ -22,7 +22,7 @@ function AboutUs() {
                             understand, remember, and act on.
                         </p>
                     </div>
-                    <div className='flex justify-end items-start'>
+                    <div className='flex md:justify-end justify-start items-start'>
                         <LinkButton label={"Our works"} />
                     </div>
                 </div>
@@ -34,19 +34,19 @@ function AboutUs() {
 
             <div className='border-t-[#ccc] border-t-[0.1px]'>
                <div className="container">
-                 <div className='flex w-full flex-col md:flex-row mb-20'>
-                    <p className='w-full md:md:w-[50%]'>We are Ochi design</p>
+                 <div className='flex w-full flex-col md:flex-row md:mb-20 mb-4'>
+                    <p className='w-full md:md:w-[50%] md:text-[16px] text-xl mb-4'>We are Ochi design</p>
 
                 <div className='w-full md:w-[50%]'>
                     <p className='mb-6'>
-                    The world-class, tight-knit group of <br /> creative experts from across the globe, <br />
-                    who work together to create industry-shifting <br /> presentations that
+                    The world-class, tight-knit group of <br className='hidden md:block'/> creative experts from across the globe, <br className='hidden md:block'/>
+                    who work together to create industry-shifting <br className='hidden md:block'/> presentations that
                     win people's  hearts and minds.
                 </p>
                 <p>
-                    We’ve earned our reputation through <br /> years of collaboration
-                    with global clients <br /> who know that being different
-                    takes <br /> courage and craft.
+                    We’ve earned our reputation through <br className='hidden md:block'/> years of collaboration
+                    with global clients <br className='hidden md:block'/> who know that being different
+                    takes <br className='hidden md:block'/> courage and craft.
                 </p>
                 </div>
                  </div>

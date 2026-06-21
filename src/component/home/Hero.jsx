@@ -42,8 +42,8 @@ function Hero() {
 
 
   return (
-    <div data-scroll data-scroll-speed="-.5" className="hero md:h-screen bg-[#f1f1f1] md:pt-16 pt-9">
-      <div className='container relative'>
+    <div data-scroll data-scroll-speed="-.5" className="hero h-screen bg-[#f1f1f1] md:pt-16 pt-9">
+      <div className='container relative '>
         <h1 className=' text-[8rem] text-[#212121] uppercase flex flex-col items-start leading-27'>
           <div className='text-6xl md:text-7xl lg:text-[8rem] overflow-hidden'>
             <span className='inline-block'> We create</span>
@@ -72,7 +72,7 @@ function Hero() {
         </h1>
 
 
-        <div className="img absolute right-0 top-[30%] cursor-pointer">
+        <div className="img absolute right-0 top-0 md:top-[30%] cursor-pointer">
           <svg width="53.08" height="171.358">
             <path className="js-color-bg" fill="#E73C37" d="M0 0h53.08v171.358H0z"></path>
             <g className="js-color-text" fill="#fff">
@@ -84,8 +84,8 @@ function Hero() {
 
       </div>
 
-      <div className="hero-bottom border-t mt-[15%] bg-[#f1f1f1]">
-        <div className="container flex flex-col gap-8 md:flex-row md:justify-between md:items-center ">
+      <div className="hero-bottom border-t mt-[50%] md:mt-[15%] bg-[#f1f1f1]">
+        <div className="container flex flex-col gap-4 md:gap-8 md:flex-row md:justify-between md:items-center ">
           <p>Presentation and storytelling agency</p>
           <p>For innovation teams and global brands</p>
           <button className='uppercase flex items-center gap-2 cursor-pointer group'>

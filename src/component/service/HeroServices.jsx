@@ -18,15 +18,15 @@ function HeroServices() {
                 <div className="container">
                     <h2 className='text-5xl md:mb-10 '>
                         Our work has helped clients
-                        secure $400M+ in <br /> funding, wow small and global stages,
-                        and shape <br /> how the world sees them.
+                        secure $400M+ in <br className='hidden md:block'/> funding, wow small and global stages,
+                        and shape <br className='hidden md:block'/> how the world sees them.
                     </h2>
                 </div>
             </div>
 
             <div className="container">
-                <div className='grid grid-cols-4 gap-6'>
-                    <div className='col-span-2'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+                    <div className='md:col-span-2'>
                         <p>We're best positioned for 3 types of clients:</p>
                     </div>
 

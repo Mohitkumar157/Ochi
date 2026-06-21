@@ -21,7 +21,7 @@ const occhiCardsData = [
 
 function Ochi() {
   return (
-    <div className='my-9! md:sticky md:top-4 container grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 py-16!'>
+    <div className='md:my-9! md:sticky md:top-4 container grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 py-16!'>
         {occhiCardsData.map((card , index) => <OchiCard key={index} card = {card} index = {index}/>)}
       
     </div>

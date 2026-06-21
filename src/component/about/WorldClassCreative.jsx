@@ -10,7 +10,7 @@ function WorldClassCreative() {
             <div className='border-b w-full border-b-[#ccc]'>
                 <div className="container">
                     <h2 className='text-5xl'>
-                        A world-class creative duo, backed <br /> by a team without borders.
+                        A world-class creative duo, backed <br className='hidden md:block'/> by a team without borders.
                     </h2>
                 </div>
             </div>
