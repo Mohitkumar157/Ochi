@@ -42,7 +42,7 @@ function Hero() {
 
 
   return (
-    <div data-scroll data-scroll-speed="-.5" className="hero h-screen bg-[#f1f1f1] md:pt-16 pt-9">
+    <div data-scroll data-scroll-speed="-.5" className="hero md:h-screen bg-[#f1f1f1] md:pt-16 pt-9">
       <div className='container relative '>
         <h1 className=' text-[8rem] text-[#212121] uppercase flex flex-col items-start leading-27'>
           <div className='text-6xl md:text-7xl lg:text-[8rem] overflow-hidden'>
@@ -84,7 +84,7 @@ function Hero() {
 
       </div>
 
-      <div className="hero-bottom border-t mt-[70%] md:mt-[15%] bg-[#f1f1f1]">
+      <div className="hero-bottom border-t mt-[50%] md:mt-[15%] bg-[#f1f1f1]">
         <div className="container flex flex-col gap-4 md:gap-8 md:flex-row md:justify-between md:items-center ">
           <p>Presentation and storytelling agency</p>
           <p>For innovation teams and global brands</p>
